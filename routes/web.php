@@ -11,6 +11,8 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+
+Route::get('/', ['uses' => 'Controller@homepage']);
+Route::get('/cadastrar', ['uses' => 'Controller@cadastrar']);
+Route::get('/login', ['uses' => 'Controller@login']);
+
